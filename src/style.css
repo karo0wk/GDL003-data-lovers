@@ -1,40 +1,158 @@
 body{
-    margin:0;
+    background: #151917;
+    font-family: 'Roboto', sans-serif;
 }
 
-.header, .content, .footer {
-    padding: 1em 2em;
+.container{
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.content, .footer{
-    box-sizing: border-box;
-    float: left;   
+header{
+    background: #4b4847;
+    color: #eaf02d;
+    padding: 1.5em 0;
+    position: relative;
 }
 
-.header{
-    background-color: #171616;
-    height: 50px;
+header::after{
+    content: '';
+    clear: both;
+    display: block;
 }
 
-.content{
-    width: 100%;
+.logo{
+    background-image: url("icon/Logo.png");
+    float: left;
+    font-size: 4rem;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 900;
 }
 
-.footer{
-    background-color:#2b2929;
-    width: 100%; 
-    height: 50px;
+.logo span{
+    font-weight: 300;
 }
 
-video#bgVideo {
-position: relative;
-right: 0;
-bottom: 0;
-width: 100%;
-min-width: 100%;
-height: auto;
-min-height: 100%;
-z-index: -100;    
-background-size: auto;
-margin:0;
+.site-nav{
+    top:100%;
+    right:0;
+    position: absolute;
+    background: #464655;
+    clip-path: circle(0px at top right);
+    transition: clip-path ease-in-out 700ms;
 }
+.site-nav-open{
+    clip-path: circle(150% at top right);
+}
+.site-nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.site-nav li{
+    border-bottom: 1px solid #575766;
+}
+.site-nav li:last-child{
+    border-bottom: none;
+}
+.site-nav a{
+    color: #ebedb3;
+    display: block;
+    padding: 2em 6em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.site-nav a:hover,
+.site-nav a:focus{
+    background: #4b4847;
+    color: #eaf02d;
+}
+
+.site-nav--icon{
+    display: inline-block;
+    font-size: 1.5em;
+    margin-right: 1em;
+    width: 1.1em;
+    text-align: right;
+    color: rgba(255, 255, 255, .4);
+}
+
+.menu-toggle{
+    padding: 1em;
+    position: absolute;
+    top: .5em;
+    right: .5em;
+}
+
+.menu-open .hamburger{
+    transform: rotate(45deg);
+}
+
+.menu-open .hamburger::before{
+    opacity: 0;
+}
+
+.menu-open .hamburger::after{
+    transform: translateY(-3px) rotate(-90deg);
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+    content: '';
+    display: block;
+    background: #ebebd3;
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+    transition: all ease-in-out 500ms;
+}
+
+.hamburger::before{
+    transform: translateY(-6px);
+}
+
+.hamburger::after{
+    transform: translateY(3px);
+}
+
+@media (min-width:700px){
+  .menu-toggle{
+      display: none;
+  }
+  .site-nav{
+      height: auto;
+      position: relative;
+      background: transparent;
+      float: right;
+      margin-right: 10px;
+      clip-path: initial;
+  }
+  .site-nav li{
+      border: none;
+      display: inline-block;
+  }
+
+  .site-nav a{
+      margin-left: 3em;
+      padding: 0;
+  }
+
+  .site-nav--icon{
+      display: none;
+  }
+
+  .site-nav a:hover,
+  .site-nav a:focus{
+      background: transparent;
+  }
+
+}
+
+#car {
+ width: 100%; /* use this, or not */
+ margin:auto;
+ /*background-image: url("https://www.w3schools.com/css/trolltunga.jpg");*/
+   }
