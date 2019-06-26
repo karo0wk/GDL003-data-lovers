@@ -20,7 +20,8 @@ function traerDatos(){
    if (this.readyState == 4 && this.status == 200) {
      let myObject = JSON.parse(this.responseText);
      let resuesta= document.querySelector('#respuesta');
-     res.innerHTML='';
+     /*res.innerHTML='';*/
+
      /*console.log("Json parsed data is: " + JSON.stringify(myObject));*/
 
      /*for(let item of myObject){
