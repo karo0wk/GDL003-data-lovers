@@ -8,23 +8,24 @@ function changeClass(){
 }
 
 /*Json*/
+
+
 document.querySelector('#buttonJson').addEventListener('click',traerDatos);
 function traerDatos(){
   let xmlhttp = new XMLHttpRequest();
-  xmlhttp.open("GET", "./data/lol/lol.json", true);
+  xmlhttp.open("GET", "https://raw.githubusercontent.com/LibertaAlonso/GDL003-data-lovers/master/src/data/lol/lol.json", true);
   xmlhttp.send();
 
   xmlhttp.onreadystatechange = function(){
-
 
    if (this.readyState == 4 && this.status == 200) {
      let myObject = JSON.parse(this.responseText);
      let resuesta= document.querySelector('#respuesta');
      /*res.innerHTML='';*/
 
-     /*console.log("Json parsed data is: " + JSON.stringify(myObject));*/
+     console.log("Json parsed data is: " + JSON.stringify(myObject));
 
-     /*for(let item of myObject){
+     for(let item of myObject){
        respuesta.innerHTML+=`
        <tr>
        <td>${item.version}</td>
@@ -44,7 +45,7 @@ function traerDatos(){
        </tr>`
 
 
-     }*/
+     }
    }
  }
 }
