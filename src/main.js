@@ -7,8 +7,7 @@ function changeClass(){
 
 }
 
-/*Json*/
-
+/*  JSON */
 
 document.querySelector('#buttonJson').addEventListener('click',traerDatos);
 function traerDatos(){
@@ -21,31 +20,15 @@ function traerDatos(){
    if (this.readyState == 4 && this.status == 200) {
      let myObject = JSON.parse(this.responseText);
      let resuesta= document.querySelector('#respuesta');
-     /*res.innerHTML='';*/
+     //respuesta.innerHTML='';
 
-     console.log("Json parsed data is: " + JSON.stringify(myObject));
-
-     for(let item of myObject){
-       respuesta.innerHTML+=`
-       <tr>
-       <td>${item.version}</td>
-       <td>${item.id}</td>
-       <td>${item.key}</td>
-       <td>${item.name}</td>
-       <td>${item.title}</td>
-       <td>${item.img}</td>
-       <td>${item.version}</td>
-       <td>${item.blurb}</td>
-       <td>${item.version}</td>
-       <td>${item.attack}</td>
-       <td>${item.defense}</td>
-       <td>${item.blurb}</td>
-       <td>${item.magic}</td>
-       <td>${item.difficulty}</td>
-       </tr>`
+     //console.log("Json parsed data is: " + JSON.stringify(myObject));
 
 
-     }
+     Object.keys(myObject).forEach(function (key){
+         console.log(myObject[key]);
+     });
+
    }
  }
 }
