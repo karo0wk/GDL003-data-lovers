@@ -1,7 +1,8 @@
 body{
-    background: #ebebd3;
-    /*ebebd3*/151917
+    /*background: #ebebd3;*/
+    /*ebebd3*/
     font-family: 'Roboto', sans-serif;
+    background-image: url('diana.webm');
 }
 
 .container{
@@ -32,6 +33,23 @@ header::after{
     text-transform: uppercase;
     font-weight: 900;
 }
+/*Tabla*/
+#tableLOL tbody tr > td{
+    border: 1px solid rgb(220,220,220);
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+#tableLOL{
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+
+
+}
 
 /*Estilos de la galeria*/
 
@@ -53,11 +71,8 @@ header::after{
 
 .galeria img {
 	width: 150px;
-<<<<<<< HEAD
 	height: 100px;
-=======
 	height: 150px;
->>>>>>> d25e85c441cef798dcc7a17a6642b83c4bbf83a6
 }
 
 /*Estilos del modal*/
