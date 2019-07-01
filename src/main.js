@@ -1,4 +1,36 @@
-//document.getElementById('championsLOL').style.display = "block";
+//document.getElementById('championsLOL').style.display = 'none';
+
+let traerDatos = () =>  {
+	//document.getElementById('championsLOL').style.display = "block";
+	let xmlhttp = new XMLHttpRequest();
+	xmlhttp.open('GET', 'https://raw.githubusercontent.com/LibertaAlonso/GDL003-data-lovers/master/src/data/lol/lol.json', true);
+	xmlhttp.send();
+
+	xmlhttp.onreadystatechange = function () {
+
+		if (this.readyState == 4 && this.status == 200) {
+
+			let myObject = JSON.parse(this.responseText);
+			let answerLOL = document.querySelector('#answerLOL');			
+			
+			Object.keys(myObject.data).forEach(function (key) {
+				answerLOL.innerHTML += `
+				<div class='lol'>
+				<img src="${myObject.data[key].img}">
+				<p><h2>${myObject.data[key].name}</h2></p>
+				<p><h3>${myObject.data[key].title}</h3></p>
+				<p>Ataque: ${myObject.data[key].info.attack}</p>
+				<p>Defensa: ${myObject.data[key].info.defense}</p>
+				<p>Magia ${myObject.data[key].info.magic}</p>
+				<p>Dificultad: ${myObject.data[key].info.difficulty}</p>
+				</div>`;
+			});
+		}
+	}
+}
+document.querySelector('#buttonJSON').addEventListener('click', traerDatos);
+//document.getElementById('championsLOL').style.display = "none";
+
 
 /*Start-Menu*/
 
@@ -39,37 +71,7 @@ let search = () => {
 
 /*Start-JSON.parse */
 
-//document.getElementById('championsLOL').style.display = "none";
-let traerDatos = () =>  {
-	//document.getElementById('championsLOL').style.display = "block";
-	let xmlhttp = new XMLHttpRequest();
-	xmlhttp.open('GET', 'https://raw.githubusercontent.com/LibertaAlonso/GDL003-data-lovers/master/src/data/lol/lol.json', true);
-	xmlhttp.send();
 
-	xmlhttp.onreadystatechange = function () {
-
-		if (this.readyState == 4 && this.status == 200) {
-
-			let myObject = JSON.parse(this.responseText);
-			let answerLOL = document.querySelector('#answerLOL');			
-			
-			Object.keys(myObject.data).forEach(function (key) {
-				answerLOL.innerHTML += `
-				<div class='lol'>
-				<img src="${myObject.data[key].img}">
-				<p><h2>${myObject.data[key].name}</h2></p>
-				<p><h3>${myObject.data[key].title}</h3></p>
-				<p>Ataque: ${myObject.data[key].info.attack}</p>
-				<p>Defensa: ${myObject.data[key].info.defense}</p>
-				<p>Magia ${myObject.data[key].info.magic}</p>
-				<p>Dificultad: ${myObject.data[key].info.difficulty}</p>
-				</div>`;
-			});
-		}
-	}
-}
-document.querySelector('#buttonJSON').addEventListener('click', traerDatos);
-document.getElementById('championsLOL').style.display = "none";
 
 
 /*

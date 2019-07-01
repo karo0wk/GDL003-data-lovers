@@ -46,7 +46,7 @@ header::after{
 
 }
 
-.lol, .championsLOL{
+.lol{
   width: 250px;
   height: 280px;
   text-align: center;
@@ -58,19 +58,20 @@ header::after{
   background-image: url('carta.png');
   /*opacity: 0.6;*/
   background-repeat: no-repeat; 
-
+  //display: block;       
 }
 .championsLOL{
-  width: 750px;
+  width: 100%;
   text-align: center;
-  //float: left;
+  float: left;
   /*background: rgba(255, 255, 255, 0.10);*/
   padding: 5px;
-  margin: 9px;
+  margin: auto;
   /*border-radius: 10px;*/
-  background-image: url('carta.png');
+  /*background-image: url('carta.png');*/
   /*opacity: 0.6;*/
   background-repeat: no-repeat; 
+  /*display:block;*/
 }
 
 /*Button*/
