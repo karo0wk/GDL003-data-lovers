@@ -1,21 +1,20 @@
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
+/* esta es una función de ejemplo
+ puedes ver como agregamos la función a nuestro objeto global window
 
-/*const example = () => {
+const example = () => {
   return 'example';
 };
-
 window.example = example;*/
 
-const filterData = () => {
+let filterData = () => {
   return 'filterData';
 };
 
-const sortData = () => {
+let sortData = () => {
   return 'sortData';
 };
 
-const computeStats = () => {
+let computeStats = () => {
   return 'computeStats';
 };
 
