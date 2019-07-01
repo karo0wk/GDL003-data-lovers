@@ -23,6 +23,7 @@ function traerDatos() {
 		if (this.readyState == 4 && this.status == 200) {
 			//onsole.log(this.responseText);
 
+
 			let myObject = JSON.parse(this.responseText);
 			//console.log(myObject);
 			let respuesta = document.querySelector('#respuesta');
@@ -54,6 +55,18 @@ function traerDatos() {
 }
 
 /*Función filterData*/
+const filter = (data, tank) => {
+let searchData='';
+
+for(let i=0;i<LOL.length;i++){
+    let asesinos=LOL[i].tags.Assasin;
+    console.log(LOL[i].tags.Assasin);
+    searchData+=asesinos+`<br>`;
+  }
+return searchData;
+}
+
+
 
 /*Función sortData*/
 function Search() {
