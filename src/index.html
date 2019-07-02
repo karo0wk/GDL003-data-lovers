@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
    <head>
@@ -13,10 +11,9 @@
       <link rel="stylesheet" href="style.css" />
    </head>
    <body>
-      <!--Inicio-Header-->
       <header>
          <div class="container">
-            <h1 class="logo" <img ="Title.png"></h1>
+            <h1 class="logo"> </h1>
          </div>
          <nav id="site-nav" class="site-nav">
             <ul>
@@ -35,42 +32,69 @@
       <!-- Boton Json-->
       <div class ='Container'>
          <div class = 'section'>
-            <button class = 'buttonJson' id = 'buttonJSON'>JSON</button>
-            <select>
-               <option value="tags">Etiquetas</option>
-               <option value="fighter">Combatiente</option>
-               <option value="tank">Tanque</option>
-            </select>
-            <form>Busqueda:<input id="textSeach" type="text" onkeyup="Search();" /></form>
+              <div class='search'>
+               <form class='busqueda'>
+                 <input class='inputSeach' id="textSeach" type="text" onkeyup="search();" placeholder="Buscar personaje..." />
+               </form>
 
-            <table id='tableLOL'>
-               <thead>
-                  <th>Imagen</th>
-                  <th>Nombre</th>
-                  <th>Versión</th>
-                  <th>ID</th>
-                  <th>Llave</th>
-                  <th>Titulo</th>
-                  <th>Ataque</th>
-                  <th>Defensa</th>
-                  <th>Magia</th>
-                  <th>Dificultad</th>
-               </thead>
-               <tbody id="respuesta"></tbody>
-            </table>
+               </div>
+            <button class = 'buttonJson' id = 'buttonJSON'></button>
+            <ul class="checkboxContainer">
+                  <label class="containerCheckbox">Apoyo
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="containerCheckbox">Asesino
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="containerCheckbox">Combatiente
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="containerCheckbox">Mago
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="containerCheckbox">Tanque
+                           <input type="checkbox">
+                           <span class="checkmark"></span>
+                     </label>
+                     <label class="containerCheckbox">Tirador
+                           <input type="checkbox">
+                           <span class="checkmark"></span>
+                         </label>
+                        </ul>
+            
+
+               
+
+               </div>
+              <!-- <table id='tableLOL'>
+                  <thead>
+                     <th>Imagen</th>
+                     <th>Nombre</th>
+                     <th>Titulo</th>
+                     <th>Ataque</th>
+                     <th>Defensa</th>
+                     <th>Magia</th>
+                     <th>Dificultad</th>
+                  </thead>
+                  <tbody id="respuesta"></tbody>
+               </table>-->
+            </div>
          </div>
-      </div>
+         <div class='championsLOL' id='answerLOL'></div>
+
       <!-- /Boton Json-->
-      <!-- Inicio-Carrusel -->
-      <!-- Fin-Carrusel -->
       <!--  <h1>Personajes</h1>
-         <ul class="galeria">
+         <ul class="respuesta">
          	<li><a href="#img1"><img src="icon/Aatrox.png"></a></li>
          	<li><a href="#img2"><img src="icon/Ahri.png"></a></li>
          	<li><a href="#img3"><img src="icon/Akali.png"></a></li>
          	<li><a href="#img4"><img src="icon/Alistar.png"></a></li>
-            <li><a href="#img5"><img src="icon/Amumu.png"></a></li>
-            <li><a href="#img6"><img src="icon/Anivia.png"></a></li>
+          <li><a href="#img5"><img src="icon/Amumu.png"></a></li>
+          <li><a href="#img6"><img src="icon/Anivia.png"></a></li>
          </ul>
 
           <ul class="galeria">
@@ -78,8 +102,8 @@
          	<li><a href="#img8"><img src="icon/Ashe.png"></a></li>
          	<li><a href="#img9"><img src="icon/AurelionSol.png"></a></li>
          	<li><a href="#img10"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Azir.png"></a></li>
-            <li><a href="#img11"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Bard.png"></a></li>
-            <li><a href="#img12"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Blitzcrank.png"></a></li>
+          <li><a href="#img11"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Bard.png"></a></li>
+          <li><a href="#img12"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Blitzcrank.png"></a></li>
          </ul>
 
           <ul class="galeria">

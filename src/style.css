@@ -1,22 +1,31 @@
-body{
-    /*background: #ebebd3;*/
-    /*ebebd3*/
+body,html{
     font-family: 'Roboto', sans-serif;
-    background-image: url('diana.webm');
+    background-image:url('Fondo3.jpg');
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
 }
 
 .container{
     width: 95%;
     max-width: 1000px;
     margin: 0 auto;
+
 }
 
 header{
-    background: #4b4847;
-    color: #eaf02d;
     padding: 1.5em 0;
     position: relative;
-    background-image: url("icon/Logo.png");
+    background: rgba(255, 255, 255, 0.10);
+    background-image: url('Logo.png');
+    background-repeat: no-repeat;
+    height: auto;
+    font-size: 20px;
 }
 
 header::after{
@@ -25,44 +34,161 @@ header::after{
     display: block;
 }
 
-.logo{
-    background-image: url("icon/Logo.png");
-    float: left;
-    font-size: 4rem;
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: 900;
-}
-/*Tabla*/
-#tableLOL tbody tr > td{
-    border: 1px solid rgb(220,220,220);
-    width: 95%;
-    max-width: 1000px;
-    margin: 0 auto;
+.championsLOL{
+  margin:auto;
+  width: 900px;
+  margin-top: 20px;
+  text-align: center;
+  color: #fff;
+  left: 0;
+  display: inline-block;
+  padding: 10px;
 
 }
 
-#tableLOL{
-  width: 95%;
-  max-width: 1000px;
-  margin: 0 auto;
-
-
+.lol, .championsLOL{
+  width: 250px;
+  height: 280px;
+  text-align: center;
+  float: left;
+  /*background: rgba(255, 255, 255, 0.10);*/
+  padding: 5px;
+  margin: 9px;
+  /*border-radius: 10px;*/
+  background-image: url('carta.png');
+  /*opacity: 0.6;*/
+  background-repeat: no-repeat; 
 
 }
+.championsLOL{
+  width: 750px;
+  text-align: center;
+  //float: left;
+  /*background: rgba(255, 255, 255, 0.10);*/
+  padding: 5px;
+  margin: 9px;
+  /*border-radius: 10px;*/
+  background-image: url('carta.png');
+  /*opacity: 0.6;*/
+  background-repeat: no-repeat; 
+}
+
+/*Button*/
+.buttonJson{
+    background-image: url('game.png');
+    background-repeat: no-repeat;
+    /*background: rgba(255, 255, 250, 0.0);*/
+    width: 36px;
+    height: 36px;
+    border: none !important;
+}
+/*Inicio-Container-Checkbox*/
+.containerCheckbox {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .containerCheckbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .containerCheckbox:hover input ~ .checkmark {
+    background-color: rgb(85, 82, 82);
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .containerCheckbox input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .containerCheckbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .containerCheckbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  ul.containerCheckbox li {
+    display: inline;
+    padding-right: 0.5em;
+  
+  }
+/*Fin-Container-Checkbox*/
+
+/* Inicio-Search*/
+.inputSeach[type=text] {
+  width: 50px;
+  box-sizing: border-box;
+  border: rgba(255, 255, 255, 0.0);
+  border-radius: 4px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.0);
+  background-image: url('search.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  float: right;
+}
+input[type=text]:focus {
+  width: 15%;
+}
+/* Fin-Search*/
 
 /*Estilos de la galeria*/
 
 .galeria {
+  box-sizing: border-box;
 	width: 90%;
 	margin: auto;
 	list-style: none;
-	padding: 20px;
-	box-sizing: border-box;
-
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+    padding: 20px;
 }
 
 .galeria li {
@@ -102,7 +228,6 @@ header::after{
 .imagen {
 	width: 100%;
 	height: 50%;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -144,10 +269,6 @@ header::after{
 	line-height: 25px;
 }
 
-
-
-
-
 .logo span{
     font-weight: 300;
 }
@@ -175,16 +296,18 @@ header::after{
     border-bottom: none;
 }
 .site-nav a{
-    color: #ebedb3;
+    color: #eaf02d;
     display: block;
     padding: 2em 6em;
     text-transform: uppercase;
     text-decoration: none;
+
 }
 .site-nav a:hover,
 .site-nav a:focus{
     background: #4b4847;
-    color: #eaf02d;
+    color:  #7fb3d5;
+    font-weight: bold;
 }
 
 .site-nav--icon{
@@ -238,6 +361,7 @@ header::after{
 @media (min-width:700px){
   .menu-toggle{
       display: none;
+
   }
   .site-nav{
       height: auto;
