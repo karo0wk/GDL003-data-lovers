@@ -17,8 +17,8 @@ let traerDatos = () =>  {
 				answerLOL.innerHTML += `
 				<div class='lol'>
 				<img src="${myObject.data[key].img}">
-				<p><h2>${myObject.data[key].name}</h2></p>
-				<p><h3>${myObject.data[key].title}</h3></p>
+				<p><h1>${myObject.data[key].name}</h1></p>
+				<p><h2>${myObject.data[key].title}</h2></p>
 				<p>Ataque: ${myObject.data[key].info.attack}</p>
 				<p>Defensa: ${myObject.data[key].info.defense}</p>
 				<p>Magia ${myObject.data[key].info.magic}</p>
