@@ -11,6 +11,7 @@
       <link rel="stylesheet" href="style.css" />
    </head>
    <body>
+      <!--Inicio-Header-->
       <header>
          <div class="container">
             <h1 class="logo"> </h1>
@@ -29,350 +30,66 @@
       </header>
       <!--Fin-Header-->
 
-      <!-- Boton Json-->
-      <div class ='Container'>
+      <!--Inicio-Container-LOL-->
+      <div class ='containerLOL'>
          <div class = 'section'>
-              <div class='search'>
+            <!--Inicio-Search-->
+            <div class='search'>
                <form class='busqueda'>
-                 <input class='inputSeach' id="textSeach" type="text" onkeyup="search();" placeholder="Buscar personaje..." />
+                  <input class='inputSeach' id="textSeach" type="text" onkeyup="search();" placeholder="Buscar personaje..." />
                </form>
-
-               </div>
-            <button class = 'buttonJson' id = 'buttonJSON'></button>
-            <ul class="checkboxContainer">
-                  <label class="containerCheckbox">Apoyo
-                        <input type="checkbox" checked="checked">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="containerCheckbox">Asesino
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="containerCheckbox">Combatiente
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="containerCheckbox">Mago
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                      </label>
-                      <label class="containerCheckbox">Tanque
-                           <input type="checkbox">
-                           <span class="checkmark"></span>
-                     </label>
-                     <label class="containerCheckbox">Tirador
-                           <input type="checkbox">
-                           <span class="checkmark"></span>
-                         </label>
-                        </ul>
-            
-
-               
-
-               </div>
-              <!-- <table id='tableLOL'>
-                  <thead>
-                     <th>Imagen</th>
-                     <th>Nombre</th>
-                     <th>Titulo</th>
-                     <th>Ataque</th>
-                     <th>Defensa</th>
-                     <th>Magia</th>
-                     <th>Dificultad</th>
-                  </thead>
-                  <tbody id="respuesta"></tbody>
-               </table>-->
             </div>
+            <!--Fin-Search-->
+
+            <!--Inicio-checkbox-Tags-->
+            <div class='checkboxContainer'>
+            <ul class="checkboxTags">
+               <label class="containerCheckbox">Apoyo
+               <input type="checkbox" checked="checked">
+               <span class="checkmark"></span>
+               </label>
+               <label class="containerCheckbox">Asesino
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               </label>
+               <label class="containerCheckbox">Combatiente
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               </label>
+               <label class="containerCheckbox">Mago
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               </label>
+               <label class="containerCheckbox">Tanque
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               </label>
+               <label class="containerCheckbox">Tirador
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               </label>
+               
+            </ul>
+            </div>
+            <!--Fin-checkbox-Tags-->
+            <!--Inicio-Select-Sort-->
+            <div class="selectSort">            
+               <select>
+               <option value="ascendente">Ascendente</option>
+               <option value="descendente">Descendente</option>
+            </select>
+            </div>
+            <!--Fin-Select-Sort-->
+            
+            <button class = 'buttonJson' id = 'buttonJSON'></button>
+            <div class='championsLOL' id='answerLOL'></div>
          </div>
-         <div class='championsLOL' id='answerLOL'></div>
+      </div>
+      <!--Fin-Container-LOL-->
+      
+      <div class='championsLOL' id='answerLOL'></div>
+     
 
-      <!-- /Boton Json-->
-      <!--  <h1>Personajes</h1>
-         <ul class="respuesta">
-         	<li><a href="#img1"><img src="icon/Aatrox.png"></a></li>
-         	<li><a href="#img2"><img src="icon/Ahri.png"></a></li>
-         	<li><a href="#img3"><img src="icon/Akali.png"></a></li>
-         	<li><a href="#img4"><img src="icon/Alistar.png"></a></li>
-          <li><a href="#img5"><img src="icon/Amumu.png"></a></li>
-          <li><a href="#img6"><img src="icon/Anivia.png"></a></li>
-         </ul>
-
-          <ul class="galeria">
-         	<li><a href="#img7"><img src="icon/Annie.png"></a></li>
-         	<li><a href="#img8"><img src="icon/Ashe.png"></a></li>
-         	<li><a href="#img9"><img src="icon/AurelionSol.png"></a></li>
-         	<li><a href="#img10"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Azir.png"></a></li>
-          <li><a href="#img11"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Bard.png"></a></li>
-          <li><a href="#img12"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Blitzcrank.png"></a></li>
-         </ul>
-
-          <ul class="galeria">
-         	<li><a href="#img13"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Brand.png"></a></li>
-         	<li><a href="#img14"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Braum.png"></a></li>
-         	<li><a href="#img15"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Caitlyn.png"></a></li>
-         	<li><a href="#img16"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Camille.png"></a></li>
-            <li><a href="#img17"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Cassiopeia.png"></a></li>
-            <li><a href="#img18"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Chogath.png"></a></li>
-         </ul>
-
-          <ul class="galeria">
-         	<li><a href="#img19"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Corki.png"></a></li>
-         	<li><a href="#img20"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Darius.png"></a></li>
-         	<li><a href="#img21"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Diana.png"></a></li>
-         	<li><a href="#img22"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Draven.png"></a></li>
-            <li><a href="#img23"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/DrMundo.png"></a></li>
-            <li><a href="#img24"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Ekko.png"></a></li>
-         </ul>
-
-          <ul class="galeria">
-         	<li><a href="#img25"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Elise.png"></a></li>
-         	<li><a href="#img26"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Evelynn.png"></a></li>
-         	<li><a href="#img27"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Ezreal.png"></a></li>
-         	<li><a href="#img28"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Fiddlesticks.png"></a></li>
-            <li><a href="#img29"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Fiora.png"></a></li>
-            <li><a href="#img30"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Fizz.png"></a></li>
-         </ul>
-
-          <ul class="galeria">
-         	<li><a href="#img31"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Galio.png"></a></li>
-         	<li><a href="#img32"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Gangplank.png"></a></li>
-         	<li><a href="#img33"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Akali.png"></a></li>
-         	<li><a href="#img34"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Garen.png"></a></li>
-            <li><a href="#img35"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Gnar.png"></a></li>
-            <li><a href="#img36"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Gragas.png"></a></li>
-         </ul>
-
-          <ul class="galeria">
-         	<li><a href="#img37"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Graves.png"></a></li>
-         	<li><a href="#img38"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Hecarim.png"></a></li>
-         	<li><a href="#img39"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Heimerdinger.png"></a></li>
-         	<li><a href="#img40"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Illaoi.png"></a></li>
-            <li><a href="#img41"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Irelia.png"></a></li>
-            <li><a href="#img42"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Ivern.png"></a></li>
-         </ul>
-
-          <ul class="galeria">
-         	<li><a href="#img43"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Janna.png"></a></li>
-         	<li><a href="#img44"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/JarvanIV.png"></a></li>
-         	<li><a href="#img45"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Jax.png"></a></li>
-         	<li><a href="#img46"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Jayce.png"></a></li>
-            <li><a href="#img47"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Jhin.png"></a></li>
-            <li><a href="#img48"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Jinx.png"></a></li>
-         </ul>
-
-          <ul class="galeria">
-         	<li><a href="#img49"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Kaisa.png"></a></li>
-         	<li><a href="#img50"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Kalista.png"></a></li>
-         	<li><a href="#img51"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Karma.png"></a></li>
-         	<li><a href="#img52"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Karthus.png"></a></li>
-            <li><a href="#img53"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Kassadin.png"></a></li>
-            <li><a href="#img54"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Katarina.png"></a></li>
-         </ul>
-
-          <ul class="galeria">
-            <li><a href="#img55"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Kayle.png"></a></li>
-            <li><a href="#img56"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Kayn.png"></a></li>
-            <li><a href="#img57"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Kennen.png"></a></li>
-            <li><a href="#img58"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Khazix.png"></a></li>
-            <li><a href="#img59"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Kindred.png"></a></li>
-            <li><a href="#img60"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Kled.png"></a></li>
-          </ul>
-
-          <ul class="galeria">
-         	<li><a href="#img61"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/KogMaw.png"></a></li>
-         	<li><a href="#img62"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Leblanc.png"></a></li>
-         	<li><a href="#img63"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/LeeSin.png"></a></li>
-         	<li><a href="#img64"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Leona.png"></a></li>
-            <li><a href="#img65"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Lissandra.png"></a></li>
-            <li><a href="#img66"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Lucian.png"></a></li>
-         </ul>
-
-          <ul class="galeria">
-         	<li><a href="#img67"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Lulu.png"></a></li>
-         	<li><a href="#img68"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Lux.png"></a></li>
-         	<li><a href="#img69"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Malphite.png"></a></li>
-         	<li><a href="#img70"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Malzahar.png"></a></li>
-            <li><a href="#img71"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Maokai.png"></a></li>
-            <li><a href="#img72"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/MasterYi.png"></a></li>
-         </ul>
-
-          <ul class="galeria">
-         	<li><a href="#img73"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/MissFortune.png"></a></li>
-         	<li><a href="#img74"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/MonkeyKing.png"></a></li>
-         	<li><a href="#img75"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Mordekaiser.png"></a></li>
-         	<li><a href="#img76"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Morgana.png"></a></li>
-            <li><a href="#img77"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Nami.png"></a></li>
-            <li><a href="#img78"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Nasus.png"></a></li>
-         </ul>
-
-          <ul class="galeria">
-         	<li><a href="#img79"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Nautilus.png"></a></li>
-         	<li><a href="#img80"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Neeko.png"></a></li>
-         	<li><a href="#img81"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Nidalee.png"></a></li>
-         	<li><a href="#img82"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Nocturne.png"></a></li>
-            <li><a href="#img83"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Nunu.png"></a></li>
-            <li><a href="#img84"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Olaf.png"></a></li>
-         </ul>
-
-          <ul class="galeria">
-         	<li><a href="#img85"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Orianna.png"></a></li>
-         	<li><a href="#img86"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Ornn.png"></a></li>
-         	<li><a href="#img87"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Pantheon.png"></a></li>
-         	<li><a href="#img88"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Poppy.png"></a></li>
-            <li><a href="#img89"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Pyke.png"></a></li>
-            <li><a href="#img90"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Quinn.png"></a></li>
-         </ul>
-
-          <ul class="galeria">
-         	<li><a href="#img91"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Rakan.png"></a></li>
-         	<li><a href="#img92"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Rammus.png"></a></li>
-         	<li><a href="#img93"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/RekSai.png"></a></li>
-         	<li><a href="#img94"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Renekton.png"></a></li>
-            <li><a href="#img95"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Rengar.png"></a></li>
-            <li><a href="#img96"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Riven.png"></a></li>
-         </ul>
-
-          <ul class="galeria">
-         	<li><a href="#img97"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Rumble.png"></a></li>
-         	<li><a href="#img98"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Ryze.png"></a></li>
-         	<li><a href="#img99"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Sejuani.png"></a></li>
-         	<li><a href="#img100"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Shaco.png"></a></li>
-            <li><a href="#img101"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Shen.png"></a></li>
-            <li><a href="#img102"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Shyvana.png"></a></li>
-         </ul>
-
-          <ul class="galeria">
-            <li><a href="#img103"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Aatrox.png"></a></li>
-            <li><a href="#img104"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Ahri.png"></a></li>
-            <li><a href="#img105"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Akali.png"></a></li>
-            <li><a href="#img106"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Alistar.png"></a></li>
-            <li><a href="#img107"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Amumu.png"></a></li>
-            <li><a href="#img108"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Anivia.png"></a></li>
-          </ul>
-
-          <ul class="galeria">
-            <li><a href="#img109"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Aatrox.png"></a></li>
-            <li><a href="#img110"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Ahri.png"></a></li>
-            <li><a href="#img111"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Akali.png"></a></li>
-            <li><a href="#img112"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Alistar.png"></a></li>
-            <li><a href="#img113"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Amumu.png"></a></li>
-            <li><a href="#img114"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Anivia.png"></a></li>
-          </ul>
-
-          <ul class="galeria">
-            <li><a href="#img115"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Aatrox.png"></a></li>
-            <li><a href="#img116"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Ahri.png"></a></li>
-            <li><a href="#img117"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Akali.png"></a></li>
-            <li><a href="#img118"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Alistar.png"></a></li>
-            <li><a href="#img119"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Amumu.png"></a></li>
-            <li><a href="#img120"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Anivia.png"></a></li>
-          </ul>
-
-          <ul class="galeria">
-            <li><a href="#img121"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Aatrox.png"></a></li>
-            <li><a href="#img122"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Ahri.png"></a></li>
-            <li><a href="#img123"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Akali.png"></a></li>
-            <li><a href="#img124"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Alistar.png"></a></li>
-            <li><a href="#img125"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Amumu.png"></a></li>
-            <li><a href="#img126"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Anivia.png"></a></li>
-          </ul>
-
-          <ul class="galeria">
-            <li><a href="#img127"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Aatrox.png"></a></li>
-            <li><a href="#img128"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Ahri.png"></a></li>
-            <li><a href="#img129"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Akali.png"></a></li>
-            <li><a href="#img130"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Alistar.png"></a></li>
-            <li><a href="#img131"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Amumu.png"></a></li>
-            <li><a href="#img132"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Anivia.png"></a></li>
-          </ul>
-
-          <ul class="galeria">
-            <li><a href="#img133"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Aatrox.png"></a></li>
-            <li><a href="#img134"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Ahri.png"></a></li>
-            <li><a href="#img135"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Akali.png"></a></li>
-            <li><a href="#img136"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Alistar.png"></a></li>
-            <li><a href="#img137"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Amumu.png"></a></li>
-            <li><a href="#img138"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Anivia.png"></a></li>
-          </ul>
-
-          <ul class="galeria">
-            <li><a href="#img139"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Aatrox.png"></a></li>
-            <li><a href="#img140"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Ahri.png"></a></li>
-            <li><a href="#img141"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Akali.png"></a></li>
-            <li><a href="#img142"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Alistar.png"></a></li>
-            <li><a href="#img143"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Amumu.png"></a></li>
-            <li><a href="#img144"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Anivia.png"></a></li>
-          </ul>
-
-          <ul class="galeria">
-            <li><a href="#img145"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Aatrox.png"></a></li>
-            <li><a href="#img146"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Ahri.png"></a></li>
-            <li><a href="#img147"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Akali.png"></a></li>
-            <li><a href="#img148"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Alistar.png"></a></li>
-            <li><a href="#img149"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Amumu.png"></a></li>
-            <li><a href="#img150"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Anivia.png"></a></li>
-          </ul>
-
-
-         <div class="modal" id="img1">
-         	<h3>Paisaje 1</h3>
-         	<div class="imagen">
-         		<a href="#img4">&#60;</a>
-         		<a href="#img2"><img src="/home/laboratoria-184/Documentos/Laboratoria/GDL003-data-lovers/src/icon/Aatrox.png"></a>
-         		<a href="#img2">></a>
-         	</div>
-         	<a class="cerrar" href="">X</a>
-         </div>
-
-         <div class="modal" id="img2">
-         	<h3>Paisaje 2</h3>
-         	<div class="imagen">
-         		<a href="#img1">&#60;</a>
-         		<a href="#img3"><img src="http://neo-deco.es/wp-content/uploads/2013/01/Paisaje-de-monta%C3%B1a.jpg"></a>
-         		<a href="#img3">></a>
-         	</div>
-         	<a class="cerrar" href="">X</a>
-         </div>
-
-         <div class="modal" id="img3">
-         	<h3>Paisaje 3</h3>
-         	<div class="imagen">
-         		<a href="#img2">&#60;</a>
-         		<a href="#img4"><img src="http://www.paisajesimagenes.com/wp-content/uploads/Descripci%C3%B3n-de-paisajes..jpg"></a>
-         		<a href="#img4">></a>
-         	</div>
-         	<a class="cerrar" href="">X</a>
-         </div>
-
-         <div class="modal" id="img4">
-         	<h3>Paisaje 4</h3>
-         	<div class="imagen">
-         		<a href="#img3">&#60;</a>
-         		<a href="#img1"><img src="http://neo-deco.es/wp-content/uploads/2013/01/Paisaje-de-monta%C3%B1a.jpg"></a>
-         		<a href="#img1">></a>
-         	</div>
-         	<a class="cerrar" href="">X</a>
-         </div>
-
-          <div class="modal" id="img4">
-         	<h3>Paisaje 5</h3>
-         	<div class="imagen">
-         		<a href="#img3">&#60;</a>
-         		<a href="#img1"><img src="http://neo-deco.es/wp-content/uploads/2013/01/Paisaje-de-monta%C3%B1a.jpg"></a>
-         		<a href="#img1">></a>
-         	</div>
-         	<a class="cerrar" href="">X</a>
-         </div>
-
-          <div class="modal" id="img4">
-         	<h3>Paisaje 6</h3>
-         	<div class="imagen">
-         		<a href="#img3">&#60;</a>
-         		<a href="#img1"><img src="http://neo-deco.es/wp-content/uploads/2013/01/Paisaje-de-monta%C3%B1a.jpg"></a>
-         		<a href="#img1">></a>
-         	</div>
-         	<a class="cerrar" href="">X</a>
-         </div>-->
       <!--<script src="./data/lol/lol.json"></script>-->
       <script src="data.js"></script>
       <script src="main.js"></script>
