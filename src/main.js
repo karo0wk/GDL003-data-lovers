@@ -1,5 +1,7 @@
 //document.getElementById('championsLOL').style.display = 'none';
-
+// fetch().then((data) => {
+			//sortDAta(data)
+//})
 let traerDatos = () =>  {
 	//document.getElementById('championsLOL').style.display = "block";
 	let xmlhttp = new XMLHttpRequest();
@@ -11,8 +13,8 @@ let traerDatos = () =>  {
 		if (this.readyState == 4 && this.status == 200) {
 
 			let myObject = JSON.parse(this.responseText);
-			let answerLOL = document.querySelector('#answerLOL');			
-			
+			let answerLOL = document.querySelector('#answerLOL');
+
 			Object.keys(myObject.data).forEach(function (key) {
 				answerLOL.innerHTML += `
 				<div class='lol'>
@@ -67,6 +69,9 @@ let search = () => {
             }
         }
 /*Finish-Function-Search*/
+
+
+
 
 
 /*Start-JSON.parse */
@@ -130,5 +135,30 @@ return searchData;
 
 
 /*Función sortData*/
+const myObject = JSON.parse(this.responseText);
+let ordenar = myObject.sort(function(a,b){
+	return ((a.id < b.id)?1:((a.id > b.id)?-1:0));
+});
+
+console.log(myObject);
+
+
+
+
+
+
+// let ordenarDatos1 = () =>  {
+// 	//document.getElementById('championsLOL').style.display = "block";
+//
+// objeto = JSON.parse(this.responseText);
+// var datos = objeto.data
+//
+//
+// function comparar(a, b) {
+//   return a - b;
+// }
+// console.log('original:', ordenarDatos.join());
+// console.log('ordenado sin función:', ordenarDatos.sort());
+// console.log('ordenado con función:', ordenarDatos.sort(comparar));
 
 /*Función computeStats*/
