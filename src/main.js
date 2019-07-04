@@ -50,7 +50,15 @@ document.querySelector('#buttonJSON').addEventListener('click', traerDatos);
 
 
 
+<<<<<<< HEAD
 /*Función filterData*/
+=======
+
+			let myObject = JSON.parse(this.responseText);
+			//console.log(myObject);
+			let tableLOL = document.querySelector('#tableLOL');
+			//respuesta.innerHTML='';
+>>>>>>> e34a25623b04dccfb5ac810bb3b47f8e7fa79149
 
 //
 
@@ -78,7 +86,23 @@ let sortLOL = () => {
 /*Función computeStats*/
 
 
+<<<<<<< HEAD
 /*Start-Menu*/
+=======
+/*Función filterData*/
+const filter = (data, tank) => {
+let searchData='';
+
+for(let i=0;i<LOL.length;i++){
+    let asesinos=LOL[i].tags.Assasin;
+    console.log(LOL[i].tags.Assasin);
+    searchData+=asesinos+`<br>`;
+  }
+return searchData;
+}
+
+
+>>>>>>> e34a25623b04dccfb5ac810bb3b47f8e7fa79149
 
 let changeClass = () => {
 	let siteNav = document.getElementById('site-nav');
