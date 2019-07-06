@@ -61,9 +61,9 @@ header::after{
   padding: 5px;
   margin: 9px;
   border-radius: 10px;
-  background-image: url('carta.png');
+  /*background-image: url('carta.png');*/
   background-repeat: no-repeat;  
-  opacity: 0.6; 
+  /*opacity: 0.5;*/
 }
 
 p{
@@ -175,6 +175,7 @@ h1{
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
   float: right;
+  
 }
 input[type=text]:focus {
   width: 15%;

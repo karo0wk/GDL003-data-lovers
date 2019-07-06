@@ -1,19 +1,29 @@
 
-/*let traerDatos = () =>  {
-let LOL;
+/*
+const showData = (data) => {
+   //let pintar= traerDatos();
+   let champions = data.data;
+   console.log(champions);
 
-	fetch("https://raw.githubusercontent.com/LibertadAlonso/GDL003-data-lovers/master/src/data/lol/lol.json")
-	    .then(function(resp){
-	        return resp.json();
-	    })
-	    .then(function(data){
-	      LOL = data;
-				console.log(LOL);
-				showData(LOL)
-				
-	    });
-    
-};*/
+}
+
+
+
+let traerDatos = () =>  {
+let LOL;
+// promesas y asincronía
+   fetch("https://raw.githubusercontent.com/LibertadAlonso/GDL003-data-lovers/master/src/data/lol/lol.json")
+       .then(function(resp){
+           return resp.json();
+       })
+       .then(function(data){
+         LOL = data;
+               showData(data)
+       console.log(LOL);
+
+})
+}
+*/
 
 /*Start-JSON*/
 let traerDatos = () =>  {
@@ -50,17 +60,9 @@ document.querySelector('#buttonJSON').addEventListener('click', traerDatos);
 
 
 
-<<<<<<< HEAD
 /*Función filterData*/
-=======
 
-			let myObject = JSON.parse(this.responseText);
-			//console.log(myObject);
-			let tableLOL = document.querySelector('#tableLOL');
-			//respuesta.innerHTML='';
->>>>>>> e34a25623b04dccfb5ac810bb3b47f8e7fa79149
-
-//
+	
 
 /*Función sortData*/
 let sortLOL = () => {
@@ -73,7 +75,7 @@ let sortLOL = () => {
 		<img src="${myObject.data[key].img}">
 		<p><h1>${myObject.data[key].name}</h1></p>
 		<p><h2>${myObject.data[key].title}</h2></p>
-		<p>Ataque: ${myObject.data[key].info.attack}</p>
+		<p>Ataque: ${myObject.data[key].info.attack}</p>bll{}
 		<p>Defensa: ${myObject.data[key].info.defense}</p>
 		<p>Magia ${myObject.data[key].info.magic}</p>
 		<p>Dificultad: ${myObject.data[key].info.difficulty}</p>
@@ -86,24 +88,7 @@ let sortLOL = () => {
 /*Función computeStats*/
 
 
-<<<<<<< HEAD
 /*Start-Menu*/
-=======
-/*Función filterData*/
-const filter = (data, tank) => {
-let searchData='';
-
-for(let i=0;i<LOL.length;i++){
-    let asesinos=LOL[i].tags.Assasin;
-    console.log(LOL[i].tags.Assasin);
-    searchData+=asesinos+`<br>`;
-  }
-return searchData;
-}
-
-
->>>>>>> e34a25623b04dccfb5ac810bb3b47f8e7fa79149
-
 let changeClass = () => {
 	let siteNav = document.getElementById('site-nav');
 	siteNav.classList.toggle('site-nav-open');
