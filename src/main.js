@@ -133,8 +133,38 @@ return searchData;
 }
 
 
+/*función para traer datos con fetch*/
+let LOL;
+fetch("https://raw.githubusercontent.com/LibertaAlonso/GDL003-data-lovers/master/src/data/lol/lol.json")
+    .then(function(resp){
+        return resp.json();
+    })
+    .then(function(data){
+      LOL = data;
+    });
+console.log(theName);
+
+
+// oooooooooooooo...
+var json = '/src/data/lol/lol.json';
+obj = JSON.parse(json);
+console.log(obj.name);
+console.log(obj.version);
+console.log(obj.main);
+console.log(obj.license);
+
+var bebe = obj.name;
+document.write(json);
+
+
+
+
+// poner la pagina del servidor
+
+
 
 /*Función sortData*/
+
 const myObject = JSON.parse(this.responseText);
 let ordenar = myObject.sort(function(a,b){
 	return ((a.id < b.id)?1:((a.id > b.id)?-1:0));
