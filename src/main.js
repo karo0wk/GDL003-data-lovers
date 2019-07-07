@@ -1,31 +1,46 @@
+//  Mostrar los datos inicio
 
-/*
 const showData = (data) => {
-   //let pintar= traerDatos();
-   let champions = data.data;
-   console.log(champions);
+    //let pintar= traerDatos();
+    let champions = data.data;
+		let atrox = data.data.Aatrox;
+    //console.log(atrox);
 
+    let answerLOL = document.querySelector('#answerLOL');
+
+    Object.keys(champions).forEach(function (key) {
+      answerLOL.innerHTML += `
+      <div class='lol'>
+      <img src="${champions[key].img}">
+      <p><h1>${champions[key].name}</h1></p>
+      <p><h2>${champions[key].title}</h2></p>
+      <p>Ataque: ${champions[key].info.attack}</p>
+      <p>Defensa: ${champions[key].info.defense}</p>
+      <p>Magia ${champions[key].info.magic}</p>
+      <p>Dificultad: ${champions[key].info.difficulty}</p>
+      </div>`;
+    });
 }
+//mostrar los datos fin//
 
-
-
-let traerDatos = () =>  {
-let LOL;
-// promesas y asincronía
-   fetch("https://raw.githubusercontent.com/LibertadAlonso/GDL003-data-lovers/master/src/data/lol/lol.json")
-       .then(function(resp){
-           return resp.json();
-       })
-       .then(function(data){
-         LOL = data;
-               showData(data)
-       console.log(LOL);
-
-})
-}
-*/
 
 /*Start-JSON*/
+let bringData = () =>  {
+
+// promesas y asincronía
+    fetch("https://raw.githubusercontent.com/LibertadAlonso/GDL003-data-lovers/master/src/data/lol/lol.json")
+        .then(function(resp){
+            return resp.json();
+        })
+        .then(function(data){
+          showData(data)
+          console.log(bringData);
+})
+
+
+}
+            document.getElementById("buttonJSON").addEventListener('click', bringData);
+
 
 /*Finish-JSON*/
 
@@ -91,30 +106,6 @@ let sortLOL = () => {
 /*Función computeStats*/
 
 /*función para traer datos con fetch*/
-let LOL;
-fetch("https://raw.githubusercontent.com/LibertaAlonso/GDL003-data-lovers/master/src/data/lol/lol.json")
-    .then(function(resp){
-        return resp.json();
-    })
-    .then(function(data){
-      LOL = data;
-    });
-console.log(theName);
-
-
-// oooooooooooooo...
-var json = '/src/data/lol/lol.json';
-obj = JSON.parse(json);
-console.log(obj.name);
-console.log(obj.version);
-console.log(obj.main);
-console.log(obj.license);
-
-var bebe = obj.name;
-document.write(json);
-
-
-
 
 // poner la pagina del servidor
 
@@ -133,24 +124,4 @@ let ordenar = myObject.sort(function(a,b){
 });
 
 console.log(myObject);
-
-
-
-
-
-
-// let ordenarDatos1 = () =>  {
-// 	//document.getElementById('championsLOL').style.display = "block";
-//
-// objeto = JSON.parse(this.responseText);
-// var datos = objeto.data
-//
-//
-// function comparar(a, b) {
-//   return a - b;
-// }
-// console.log('original:', ordenarDatos.join());
-// console.log('ordenado sin función:', ordenarDatos.sort());
-// console.log('ordenado con función:', ordenarDatos.sort(comparar));
-
-/*Función computeStats*/
+}
