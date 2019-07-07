@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+      <!---S<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"-->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
       <title>Data Lovers</title>
       <link rel="shortcut icon" href="./icon/Title.png"/>
@@ -40,57 +40,60 @@
                </form>
             </div>
             <!--Fin-Search-->
-
-            <!--Inicio-checkbox-Tags-->
-            <div class='checkboxContainer'>
-            <ul class="checkboxTags">
-               <label class="containerCheckbox">Apoyo
-               <input type="checkbox" checked="checked">
-               <span class="checkmark"></span>
-               </label>
-               <label class="containerCheckbox">Asesino
-               <input type="checkbox">
-               <span class="checkmark"></span>
-               </label>
-               <label class="containerCheckbox">Combatiente
-               <input type="checkbox">
-               <span class="checkmark"></span>
-               </label>
-               <label class="containerCheckbox">Mago
-               <input type="checkbox">
-               <span class="checkmark"></span>
-               </label>
-               <label class="containerCheckbox">Tanque
-               <input type="checkbox">
-               <span class="checkmark"></span>
-               </label>
-               <label class="containerCheckbox">Tirador
-               <input type="checkbox">
-               <span class="checkmark"></span>
-               </label>
-               
-            </ul>
-            </div>
-            <!--Fin-checkbox-Tags-->
-            <!--Inicio-Select-Sort-->
-            <div class="selectSort">            
-               <select>
-               <option value="ascendente">Ascendente</option>
-               <option value="descendente">Descendente</option>
-            </select>
-            </div>
-            <!--Fin-Select-Sort-->
-            
-            <button class = 'buttonJson' id = 'buttonJSON'></button>
-            <div class='championsLOL' id='answerLOL'></div>
+ 
          </div>
+
+         <!--Inicio-checkbox-Tags-->
+         <!--<div class='checkboxContainer'>
+               <ul class="checkboxTags">
+                  <label class="containerCheckbox">Apoyo
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                  </label>
+                  <label class="containerCheckbox">Asesino
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  </label>
+                  <label class="containerCheckbox">Combatiente
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  </label>
+                  <label class="containerCheckbox">Mago
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  </label>
+                  <label class="containerCheckbox">Tanque
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  </label>
+                  <label class="containerCheckbox">Tirador
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  </label>
+                  
+               </ul>
+               </div>-->
+               <!--Fin-checkbox-Tags-->
+
+               <!--Inicio-Select-Sort-->
+               <div class="custom-select">            
+                  <select>
+                 <option value="1">Organizar por:</option>
+                  <option value="ascendente">Ascendente</option>
+                  <option value="descendente">Descendente</option>
+               </select>
+               </div>
+               <!--Fin-Select-Sort-->
+         
+      <button class = 'buttonJson' id = 'buttonJSON'></button>
+      <div class='championsLOL' id='answerLOL'></div>
       </div>
       <!--Fin-Container-LOL-->
       
-      <div class='championsLOL' id='answerLOL'></div>
+      
      
 
-      <!--<script src="./data/lol/lol.json"></script>-->
+      <script src="./data/lol/lol.json"></script>
       <script src="data.js"></script>
       <script src="main.js"></script>
    </body>

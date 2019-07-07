@@ -1,25 +1,38 @@
-/* esta es una función de ejemplo
- puedes ver como agregamos la función a nuestro objeto global window
+window.example={
 
-const example = () => {
-  return 'example';
-};
-window.example = example;*/
-
-let filterData = () => {
+ filterData : () => {
   return 'filterData';
-};
+},
 
-let sortData = () => {
-  return 'sortData';
-};
 
-let computeStats = () => {
+sortData : (input, sortBy, sortOrder) => {
+  let output;
+  if (sortOrder == "Ascendente") {
+    output = input.sort((a, b) => {
+      if (a[sortBy] < b[sortBy]) {
+        return -1;
+      } else if (a[sortBy] > b[sortBy]) {
+        return 1;
+      }
+      return 0;
+    });
+  }
+  if (sortOrder == "Descendente") {
+    output = input.sort((b, a) => {
+      if (a[sortBy] < b[sortBy]) {
+        return -1;
+      } else if (a[sortBy] > b[sortBy]) {
+        return 1;
+      }
+      return 0;
+    });
+  }
+  return output;
+},
+
+
+ computeStats : () => {
   return 'computeStats';
-};
+}
 
-window.example = {
-  filterData,
-  sortData,
-  computeStats
 };
